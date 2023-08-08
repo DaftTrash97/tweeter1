@@ -1,0 +1,24 @@
+/* Global styles */
+
+/* Header styles */
+header {
+    height: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:cyan;
+    top: 120px;
+    background-image: url("/images/dimension.png");
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name {
+    text-align: center;
+}
