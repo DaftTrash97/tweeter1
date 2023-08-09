@@ -1,0 +1,26 @@
+.new-tweet {
+    width: 100%;
+    background-color: #f4f1ec;
+}
+textarea {
+    font-weight: bold;
+    width: 100%;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid #000000;
+
+  }
+
+button {
+    background-color: #4056A1;
+    color: #FFFFFF;
+    font-family: 'Bungee', sans-serif;
+}
+
+output {
+    color: #000000;
+    font-family: 'Bungee', sans-serif;
+    font-weight: bold;
+    float: right;
+}
