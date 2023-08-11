@@ -7,5 +7,11 @@ $(document).ready(function() {
     let counterElement = $(this).closest(".new-tweet").find(".counter");
 
     counterElement.text(remainingChars);
+
+    if (remainingChars < 0) {
+      counterElement.css("color", "red");
+    } else {
+      counterElement.css("color", "");
+    }
   });
 });
