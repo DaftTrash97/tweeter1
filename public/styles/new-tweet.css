@@ -1,6 +1,7 @@
 .new-tweet {
     width: 100%;
     background-color: #f4f1ec;
+    padding: 10px;
 }
 textarea {
     font-weight: bold;
