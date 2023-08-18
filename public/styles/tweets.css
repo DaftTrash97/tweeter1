@@ -1,11 +1,13 @@
 article.tweet {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
     font-size: 24px;
     font-family: 'Source Sans 3', sans-serif;
     background-color: #f4f1ec;
     border: 3px solid #000000;
     padding: 10px;
     box-sizing: border-box;
+    margin-bottom: 20px;
 }
 
 article.tweet header {
@@ -19,10 +21,10 @@ article.tweet header {
 .tweet-content {
     border-bottom: 3px solid #000000;
     margin-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 article.tweet footer {
-    margin: auto;
     display: flex;
     justify-content: flex-end;
     align-items: baseline;
@@ -48,6 +50,7 @@ article.tweet footer {
     opacity: 0.5;
     margin-left: 120px;
 }
+
 article.tweet:hover {
     box-shadow: 10px 10px;
 }
