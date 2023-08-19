@@ -24,10 +24,9 @@ article.tweet header {
     padding-bottom: 10px;
 }
 
-article.tweet footer {
+.icons {
     display: flex;
     justify-content: flex-end;
-    align-items: baseline;
 
 }
 
@@ -49,6 +48,11 @@ article.tweet footer {
 .username {
     opacity: 0.5;
     margin-left: 120px;
+}
+
+.timeago {
+    display: flex;
+    justify-content: flex-start;
 }
 
 article.tweet:hover {

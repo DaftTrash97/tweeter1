@@ -52,9 +52,12 @@ const createTweetElement = function (tweetData) {
       <p>${content.text}</p>
     </div>
     <footer>
+      <div class="icons">
       <i class="fa-solid fa-flag fa-xs" style="color: #1148a7;"></i>
       <i class="fa-solid fa-retweet fa-xs" style="color: #1148a7;"></i>
       <i class="fa-solid fa-heart fa-xs" style="color: #1148a7;"></i>
+      </div>
+      <time class="timeago" datetime="${new Date(created_at)}">${timeago.format(new Date(created_at))}</time>
     </footer>
   </article>
 `);
@@ -69,6 +72,8 @@ const loadTweets = function () {
 
 $(document).ready(function () {
   loadTweets();
+
+  $("time.timeago").timeago();
 
   $('form').submit(function (event) {
     event.preventDefault();
