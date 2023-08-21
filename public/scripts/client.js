@@ -53,17 +53,18 @@ $(document).ready(function () {
     const tweetText = $('#tweet-text').val();
 
     if (!tweetText) {
-      alert("Tweet cannot be empty");
+      $('#error-container').html('<i class="fa-solid fa-triangle-exclamation" style="color: #e41111;"></i> Tweet cannot be empty <i class="fa-solid fa-triangle-exclamation" style="color: #e41111;">').slideDown();
       return;
     }
 
     if (tweetText.length > 140) {
-      alert("Tweet is too long");
+      $('#error-container').html('<i class="fa-solid fa-triangle-exclamation" style="color: #e41111;"></i>Tweet is too long <i class="fa-solid fa-triangle-exclamation" style="color: #e41111;">').slideDown();
       return;
     }
     console.log($(this).serialize())
     $.post('/tweets', $(this).serialize(), function (response) {
       loadTweets();
     });
+    $('#error-container').slideUp();
   });
 });

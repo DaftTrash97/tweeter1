@@ -58,6 +58,9 @@
   <main class="container">
     <!-- section for new tweets -->
     <section class="new-tweet">
+      <div id="error-container" class="error-container">
+        <i class="fa-solid fa-triangle-exclamation" style="color: #e41111;"></i>
+      </div>
       <form method="post" action="/tweets">
         <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
         <div>
