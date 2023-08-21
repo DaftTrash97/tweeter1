@@ -4,32 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// const data = [
-//   {
-//     "user": {
-//       "name": "Newton",
-//       "avatars": "https://i.imgur.com/73hZDYK.png"
-//       ,
-//       "handle": "@SirIsaac"
-//     },
-//     "content": {
-//       "text": "If I have seen further it is by standing on the shoulders of giants"
-//     },
-//     "created_at": 1461116232227
-//   },
-//   {
-//     "user": {
-//       "name": "Descartes",
-//       "avatars": "https://i.imgur.com/nlhLi3I.png",
-//       "handle": "@rd"
-//     },
-//     "content": {
-//       "text": "Je pense , donc je suis"
-//     },
-//     "created_at": 1461113959088
-//   }
-// ]
-
 const renderTweets = function (tweets) {
   for (const tweetData of tweets) {
     const $tweet = createTweetElement(tweetData);
@@ -57,7 +31,7 @@ const createTweetElement = function (tweetData) {
       <i class="fa-solid fa-retweet fa-xs" style="color: #1148a7;"></i>
       <i class="fa-solid fa-heart fa-xs" style="color: #1148a7;"></i>
       </div>
-      <time class="timeago" datetime="${new Date(created_at)}">${timeago.format(new Date(created_at))}</time>
+      <time class="timeago">${timeago.format(created_at)}</time>
     </footer>
   </article>
 `);
@@ -73,16 +47,23 @@ const loadTweets = function () {
 $(document).ready(function () {
   loadTweets();
 
-  $("time.timeago").timeago();
-
   $('form').submit(function (event) {
     event.preventDefault();
 
-    const formData = $(this).serialize();
-    console.log(formData);
+    const tweetText = $('#tweet-text').val();
 
-    $.post('/tweets', formData, function (response) {
-      console.log(response);
+    if (!tweetText) {
+      alert("Tweet cannot be empty");
+      return;
+    }
+
+    if (tweetText.length > 140) {
+      alert("Tweet is too long");
+      return;
+    }
+    console.log($(this).serialize())
+    $.post('/tweets', $(this).serialize(), function (response) {
+      loadTweets();
     });
   });
 });
