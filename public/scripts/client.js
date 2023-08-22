@@ -65,7 +65,9 @@ $(document).ready(function () {
     $.post('/tweets', $(this).serialize(), function (response) {
       loadTweets();
       $('#tweet-text').val('');
+      $('.counter').text('140');
     });
+    
     $('#error-container').slideUp();
   });
 });
