@@ -19,3 +19,10 @@ This repository is the starter code for the project: Students will fork and clon
 - Chance
 - Body-parser
 - Timeago
+
+## Screenshots
+
+!["Screenshot of mobile view"](https://github.com/DaftTrash97/tweeter1/blob/master/docs/mobileAndTabletView.png?raw=true)
+!["Screenshot of desktop view"](https://github.com/DaftTrash97/tweeter1/blob/master/docs/desktopView.png?raw=true)
+!["Screenshot of no text input error"](https://github.com/DaftTrash97/tweeter1/blob/master/docs/errorMessage.png?raw=true)
+!["Screenshot of too long error"](https://github.com/DaftTrash97/tweeter1/blob/master/docs/tooLongError.png?raw=true)
