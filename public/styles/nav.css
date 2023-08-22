@@ -31,20 +31,18 @@ nav {
     font-size: large;
     font-family: 'Source Sans 3', sans-serif;
 }
+
 .write-text {
     margin-bottom: 10px;
 }
 
 @keyframes bounce {
-
-    v0%,
-    100% {
+    v0%, 100% {
         transform: translateY(0);
     }
-
+    
     50% {
         transform: translateY(-10px);
-        /* Adjust the distance as needed */
     }
 }
 

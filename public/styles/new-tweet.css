@@ -5,6 +5,8 @@
 }
 
 textarea {
+    display: flex;
+    justify-content: center;
     font-weight: bold;
     width: 100%;
     background: transparent;
