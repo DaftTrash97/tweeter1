@@ -52,7 +52,7 @@ $(document).ready(function () {
 
     const tweetText = $('#tweet-text').val();
 
-    if (!tweetText) {
+    if (!tweetText.trim()) {
       $('#error-container').html('<i class="fa-solid fa-triangle-exclamation" style="color: #e41111;"></i> Tweet cannot be empty <i class="fa-solid fa-triangle-exclamation" style="color: #e41111;">').slideDown();
       return;
     }
