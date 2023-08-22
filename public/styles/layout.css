@@ -6,7 +6,10 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -40,3 +43,10 @@ main {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+/* Desktop styles */
+@media (min-width: 1025px) {
+  nav {
+    width: 100%;
+  }
+}

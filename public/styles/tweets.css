@@ -1,3 +1,4 @@
+/* Mobile and Tablet Styles */
 article.tweet {
     display: flex;
     flex-direction: column;
@@ -22,6 +23,10 @@ article.tweet header {
     border-bottom: 3px solid #000000;
     margin-bottom: 20px;
     padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
 .icons {
@@ -31,8 +36,10 @@ article.tweet header {
 }
 
 .profile-info {
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .profile-info img {
@@ -47,7 +54,8 @@ article.tweet header {
 
 .username {
     opacity: 0.5;
-    margin-left: 120px;
+    margin-left: auto;
+    text-align: right;
 }
 
 .timeago {
@@ -81,4 +89,9 @@ article.tweet:hover {
     text-align: center;
     font-weight: bold;
     display: none;
+}
+
+/* Desktop styles */
+@media (min-width: 1025px) {
+
 }
