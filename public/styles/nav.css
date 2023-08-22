@@ -11,19 +11,43 @@ nav {
     height: 120px;
     width: 100%;
     background-color: #4056A1;
-    color: #FFFFFF;
-    font-family: 'Bungee', sans-serif;
     padding: 3em;
 }
 
-@keyframes bounce {
-   v0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px); /* Adjust the distance as needed */
-  }
+.logo {
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    font-family: 'Bungee', sans-serif;
+    font-size: 2vw;
 }
-  .bounce-icon {
+
+.write-tweet {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: large;
+    font-family: 'Source Sans 3', sans-serif;
+}
+.write-text {
+    margin-bottom: 10px;
+}
+
+@keyframes bounce {
+
+    v0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+        /* Adjust the distance as needed */
+    }
+}
+
+.bounce-icon {
     animation: bounce 2s infinite;
-  }
+}
