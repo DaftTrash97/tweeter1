@@ -40,9 +40,14 @@ const createTweetElement = function (tweetData) {
 
 // Load tweets from the server and render them on the page
 const loadTweets = function () {
-  $.get('/tweets', function (tweets) {
-    renderTweets(tweets);
-  });
+  $.get('/tweets')
+    .done(function (tweets) {
+      renderTweets(tweets);
+    })
+    .fail(function (error) {
+      // Handle error loading tweets 
+      console.error('Error loading tweets:', error);
+    });
 };
 
 $(document).ready(function () {
@@ -68,11 +73,16 @@ $(document).ready(function () {
 
     // Submit the new tweet, clear the textarea, and reset the character counter
     console.log($(this).serialize());
-    $.post('/tweets', $(this).serialize(), function (response) {
-      loadTweets();
-      $('#tweet-text').val('');
-      $('.counter').text('140');
-    });
+    $.post('/tweets', $(this).serialize())
+      .done(function (response) {
+        loadTweets();
+        $('#tweet-text').val('');
+        $('.counter').text('140');
+      })
+      .fail(function (error) {
+        //Handle error posting tweets
+        console.error('Error posting tweet:', error);
+      });
 
     // Hide any existing error messages
     $('#error-container').slideUp();
