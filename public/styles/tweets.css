@@ -9,7 +9,7 @@ article.tweet {
     padding: 10px;
     box-sizing: border-box;
     margin-bottom: 20px;
-    max-width: 600px;
+    max-width: 500px;
     overflow: auto;
     word-wrap: break-word;
 }
