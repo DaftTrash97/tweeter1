@@ -9,8 +9,9 @@ article.tweet {
     padding: 10px;
     box-sizing: border-box;
     margin-bottom: 20px;
-    max-height: 300px;
+    max-width: 600px;
     overflow: auto;
+    word-wrap: break-word;
 }
 
 article.tweet header {
@@ -25,7 +26,6 @@ article.tweet header {
     border-bottom: 3px solid #000000;
     margin-bottom: 20px;
     padding-bottom: 10px;
-    display: flex;
     justify-content: space-between;
     align-items: center;
 
