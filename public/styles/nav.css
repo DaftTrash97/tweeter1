@@ -37,10 +37,12 @@ nav {
 }
 
 @keyframes bounce {
-    v0%, 100% {
+
+    v0%,
+    100% {
         transform: translateY(0);
     }
-    
+
     50% {
         transform: translateY(-10px);
     }
@@ -48,4 +50,12 @@ nav {
 
 .bounce-icon {
     animation: bounce 2s infinite;
+}
+
+/*Mobile views*/
+
+@media only screen and (max-width: 1024px) {
+    nav {
+        background-image: url("/images/dimension.png"); background-color: rgb(33, 241, 248);
+    }
 }
