@@ -4,6 +4,7 @@
 
 // Render an array of tweet objects to the DOM
 const renderTweets = function (tweets) {
+  $('#tweets-container').empty();
   for (const tweetData of tweets) {
     const $tweet = createTweetElement(tweetData);
     $('#tweets-container').prepend($tweet);
